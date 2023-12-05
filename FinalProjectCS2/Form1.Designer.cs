@@ -1,0 +1,215 @@
+﻿namespace FinalProjectCS2
+{
+    partial class Form1
+    {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            SlotOne = new PictureBox();
+            SlotTwo = new PictureBox();
+            pictureBox4 = new PictureBox();
+            pictureBox6 = new PictureBox();
+            SlotThree = new PictureBox();
+            pictureBox5 = new PictureBox();
+            pictureBox7 = new PictureBox();
+            pictureBox8 = new PictureBox();
+            pictureBox9 = new PictureBox();
+            label1 = new Label();
+            Play = new Button();
+            AutoPlay = new Button();
+            ((System.ComponentModel.ISupportInitialize)SlotOne).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)SlotTwo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)SlotThree).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            SuspendLayout();
+            // 
+            // SlotOne
+            // 
+            SlotOne.Location = new Point(155, 149);
+            SlotOne.Name = "SlotOne";
+            SlotOne.Size = new Size(89, 115);
+            SlotOne.TabIndex = 0;
+            SlotOne.TabStop = false;
+            // 
+            // SlotTwo
+            // 
+            SlotTwo.Location = new Point(336, 149);
+            SlotTwo.Name = "SlotTwo";
+            SlotTwo.Size = new Size(89, 115);
+            SlotTwo.TabIndex = 1;
+            SlotTwo.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackColor = SystemColors.ActiveCaptionText;
+            pictureBox4.Location = new Point(250, 73);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(80, 297);
+            pictureBox4.TabIndex = 3;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.BackColor = SystemColors.ActiveCaptionText;
+            pictureBox6.Location = new Point(111, 73);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(510, 70);
+            pictureBox6.TabIndex = 5;
+            pictureBox6.TabStop = false;
+            // 
+            // SlotThree
+            // 
+            SlotThree.Location = new Point(517, 149);
+            SlotThree.Name = "SlotThree";
+            SlotThree.Size = new Size(83, 115);
+            SlotThree.TabIndex = 2;
+            SlotThree.TabStop = false;
+            SlotThree.Click += pictureBox3_Click;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.BackColor = SystemColors.ActiveCaptionText;
+            pictureBox5.Location = new Point(431, 133);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(80, 237);
+            pictureBox5.TabIndex = 6;
+            pictureBox5.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.BackColor = SystemColors.ActiveCaptionText;
+            pictureBox7.Location = new Point(111, 133);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(38, 237);
+            pictureBox7.TabIndex = 7;
+            pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.BackColor = SystemColors.ActiveCaptionText;
+            pictureBox8.Location = new Point(111, 270);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(510, 100);
+            pictureBox8.TabIndex = 8;
+            pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.BackColor = Color.Black;
+            pictureBox9.Location = new Point(606, 73);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(46, 297);
+            pictureBox9.TabIndex = 9;
+            pictureBox9.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Black;
+            label1.Font = new Font("Segoe UI", 32.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.Yellow;
+            label1.Location = new Point(222, 73);
+            label1.Name = "label1";
+            label1.Size = new Size(289, 59);
+            label1.TabIndex = 10;
+            label1.Text = "Slots Machine";
+            // 
+            // Play
+            // 
+            Play.BackColor = Color.Yellow;
+            Play.ForeColor = SystemColors.InfoText;
+            Play.Location = new Point(182, 297);
+            Play.Name = "Play";
+            Play.Size = new Size(94, 54);
+            Play.TabIndex = 11;
+            Play.Text = "1 Play";
+            Play.UseVisualStyleBackColor = false;
+            Play.Click += Play_Click;
+            // 
+            // AutoPlay
+            // 
+            AutoPlay.BackColor = Color.Yellow;
+            AutoPlay.ForeColor = SystemColors.InfoText;
+            AutoPlay.Location = new Point(417, 297);
+            AutoPlay.Name = "AutoPlay";
+            AutoPlay.Size = new Size(94, 54);
+            AutoPlay.TabIndex = 12;
+            AutoPlay.Text = "Auto Play";
+            AutoPlay.UseVisualStyleBackColor = false;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(AutoPlay);
+            Controls.Add(Play);
+            Controls.Add(label1);
+            Controls.Add(pictureBox9);
+            Controls.Add(pictureBox8);
+            Controls.Add(pictureBox7);
+            Controls.Add(pictureBox5);
+            Controls.Add(pictureBox6);
+            Controls.Add(pictureBox4);
+            Controls.Add(SlotThree);
+            Controls.Add(SlotTwo);
+            Controls.Add(SlotOne);
+            Name = "Form1";
+            Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)SlotOne).EndInit();
+            ((System.ComponentModel.ISupportInitialize)SlotTwo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)SlotThree).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private PictureBox SlotOne;
+        private PictureBox SlotTwo;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox6;
+        private PictureBox SlotThree;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox7;
+        private PictureBox pictureBox8;
+        private PictureBox pictureBox9;
+        private Label label1;
+        private Button Play;
+        private Button AutoPlay;
+    }
+}
