@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            SlotOne = new PictureBox();
-            SlotTwo = new PictureBox();
+            pb1 = new PictureBox();
+            pb2 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox6 = new PictureBox();
-            SlotThree = new PictureBox();
+            pb3 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox7 = new PictureBox();
             pictureBox8 = new PictureBox();
@@ -40,32 +40,34 @@
             label1 = new Label();
             Play = new Button();
             AutoPlay = new Button();
-            ((System.ComponentModel.ISupportInitialize)SlotOne).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)SlotTwo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pb1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pb2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)SlotThree).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pb3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             SuspendLayout();
             // 
-            // SlotOne
+            // pb1
             // 
-            SlotOne.Location = new Point(155, 149);
-            SlotOne.Name = "SlotOne";
-            SlotOne.Size = new Size(89, 115);
-            SlotOne.TabIndex = 0;
-            SlotOne.TabStop = false;
+            pb1.Location = new Point(155, 149);
+            pb1.Name = "pb1";
+            pb1.Size = new Size(89, 115);
+            pb1.SizeMode = PictureBoxSizeMode.Zoom;
+            pb1.TabIndex = 0;
+            pb1.TabStop = false;
             // 
-            // SlotTwo
+            // pb2
             // 
-            SlotTwo.Location = new Point(336, 149);
-            SlotTwo.Name = "SlotTwo";
-            SlotTwo.Size = new Size(89, 115);
-            SlotTwo.TabIndex = 1;
-            SlotTwo.TabStop = false;
+            pb2.Location = new Point(336, 149);
+            pb2.Name = "pb2";
+            pb2.Size = new Size(89, 115);
+            pb2.SizeMode = PictureBoxSizeMode.Zoom;
+            pb2.TabIndex = 1;
+            pb2.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -85,14 +87,17 @@
             pictureBox6.TabIndex = 5;
             pictureBox6.TabStop = false;
             // 
-            // SlotThree
+            // pb3
             // 
-            SlotThree.Location = new Point(517, 149);
-            SlotThree.Name = "SlotThree";
-            SlotThree.Size = new Size(83, 115);
-            SlotThree.TabIndex = 2;
-            SlotThree.TabStop = false;
-            SlotThree.Click += pictureBox3_Click;
+            pb3.BackColor = Color.Transparent;
+            pb3.BackgroundImageLayout = ImageLayout.Zoom;
+            pb3.Location = new Point(517, 149);
+            pb3.Name = "pb3";
+            pb3.Size = new Size(83, 115);
+            pb3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pb3.TabIndex = 2;
+            pb3.TabStop = false;
+            pb3.Click += pictureBox3_Click;
             // 
             // pictureBox5
             // 
@@ -179,16 +184,16 @@
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox4);
-            Controls.Add(SlotThree);
-            Controls.Add(SlotTwo);
-            Controls.Add(SlotOne);
+            Controls.Add(pb3);
+            Controls.Add(pb2);
+            Controls.Add(pb1);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)SlotOne).EndInit();
-            ((System.ComponentModel.ISupportInitialize)SlotTwo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pb1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pb2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)SlotThree).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pb3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
@@ -199,11 +204,11 @@
 
         #endregion
 
-        private PictureBox SlotOne;
-        private PictureBox SlotTwo;
+        private PictureBox pb1;
+        private PictureBox pb2;
         private PictureBox pictureBox4;
         private PictureBox pictureBox6;
-        private PictureBox SlotThree;
+        private PictureBox pb3;
         private PictureBox pictureBox5;
         private PictureBox pictureBox7;
         private PictureBox pictureBox8;

@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace FinalProjectCS2
 {
     public partial class Form1 : Form
@@ -7,6 +9,7 @@ namespace FinalProjectCS2
             InitializeComponent();
 
         }
+    
         Random random = new Random();
         int dirt;
         int cobbleStone;
@@ -23,20 +26,55 @@ namespace FinalProjectCS2
 
         private void Play_Click(object sender, EventArgs e)
         {
-            Odds();
-            for (int i = 1; i <= 5; i++)
+
+            for (int i = 0; i <= 3; i++)
             {
-               
-                ((PictureBox)this.Controls["pb" + i.ToString()]).Image = (Image)Properties.Resources.ResourceManager.GetObject("dice" + d.ToString());
-                if (i == 1) { d1 = d; }
-                if (i == 2) { d2 = d; }
-                if (i == 3) { d3 = d; }
+                PictureBox pictureBox = (PictureBox)Controls.Find("pb" + i, true)[0];
+                Odds();
+                if (dirt == 4)
+                {
+                    pictureBox.Image = Properties.Resources.dirt;
+                }
+                else if (cobbleStone == 16)
+                {
+                    pictureBox.Image = Properties.Resources.cobblestone;
+                }
+                else if (iron == 64)
+                {
+                    pictureBox.Image = Properties.Resources.iron;
+                }
+                else if (gold == 128)
+                {
+                    pictureBox.Image = Properties.Resources.gold;
+                }
+                else if (diamond == 512)
+                {
+                    pictureBox.Image = Properties.Resources.diamond;
+                }
+                else if (emerald == 1024)
+                {
+                    pictureBox.Image = Properties.Resources.emerald;
+                }
+                else if (netherite == 2048)
+                {
+                    pictureBox.Image = Properties.Resources.netherite;
+                }
+                else if (chainmailSArmorTrim == 10000000)
+                {
+                    pictureBox.Image = Properties.Resources.silentarmortrim;
+                }
+                else
+                {
+
+                    pictureBox.Image = Properties.Resources.x;
+                }
             }
+
         }
         private void Odds()
         {
 
-           dirt = random.Next(0, 4);
+            dirt = random.Next(0, 4);
             cobbleStone = random.Next(0, 16);
             iron = random.Next(0, 64);
             gold = random.Next(0, 128);
