@@ -32,7 +32,6 @@
             pb2 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox6 = new PictureBox();
-            pb3 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox7 = new PictureBox();
             pictureBox8 = new PictureBox();
@@ -40,15 +39,17 @@
             label1 = new Label();
             Play = new Button();
             AutoPlay = new Button();
+            pb3 = new PictureBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pb1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pb2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pb3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pb3).BeginInit();
             SuspendLayout();
             // 
             // pb1
@@ -86,18 +87,6 @@
             pictureBox6.Size = new Size(510, 70);
             pictureBox6.TabIndex = 5;
             pictureBox6.TabStop = false;
-            // 
-            // pb3
-            // 
-            pb3.BackColor = Color.Transparent;
-            pb3.BackgroundImageLayout = ImageLayout.Zoom;
-            pb3.Location = new Point(517, 149);
-            pb3.Name = "pb3";
-            pb3.Size = new Size(83, 115);
-            pb3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pb3.TabIndex = 2;
-            pb3.TabStop = false;
-            pb3.Click += pictureBox3_Click;
             // 
             // pictureBox5
             // 
@@ -169,12 +158,34 @@
             AutoPlay.TabIndex = 12;
             AutoPlay.Text = "Auto Play";
             AutoPlay.UseVisualStyleBackColor = false;
+            AutoPlay.Click += AutoPlay_Click;
+            // 
+            // pb3
+            // 
+            pb3.Location = new Point(517, 149);
+            pb3.Name = "pb3";
+            pb3.Size = new Size(89, 115);
+            pb3.SizeMode = PictureBoxSizeMode.Zoom;
+            pb3.TabIndex = 13;
+            pb3.TabStop = false;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(635, 386);
+            button1.Name = "button1";
+            button1.Size = new Size(127, 52);
+            button1.TabIndex = 14;
+            button1.Text = "Click Me To See Winning Sheet";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
+            Controls.Add(pb3);
             Controls.Add(AutoPlay);
             Controls.Add(Play);
             Controls.Add(label1);
@@ -184,7 +195,6 @@
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox4);
-            Controls.Add(pb3);
             Controls.Add(pb2);
             Controls.Add(pb1);
             Name = "Form1";
@@ -193,11 +203,11 @@
             ((System.ComponentModel.ISupportInitialize)pb2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pb3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pb3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -208,7 +218,6 @@
         private PictureBox pb2;
         private PictureBox pictureBox4;
         private PictureBox pictureBox6;
-        private PictureBox pb3;
         private PictureBox pictureBox5;
         private PictureBox pictureBox7;
         private PictureBox pictureBox8;
@@ -216,5 +225,7 @@
         private Label label1;
         private Button Play;
         private Button AutoPlay;
+        private PictureBox pb3;
+        private Button button1;
     }
 }
