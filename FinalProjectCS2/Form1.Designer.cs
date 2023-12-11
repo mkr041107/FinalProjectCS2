@@ -41,6 +41,8 @@
             AutoPlay = new Button();
             pb3 = new PictureBox();
             button1 = new Button();
+            button2 = new Button();
+            lblMoney = new Label();
             ((System.ComponentModel.ISupportInitialize)pb1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pb2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -179,11 +181,32 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // button2
+            // 
+            button2.Location = new Point(50, 392);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 15;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // lblMoney
+            // 
+            lblMoney.AutoSize = true;
+            lblMoney.Location = new Point(79, 24);
+            lblMoney.Name = "lblMoney";
+            lblMoney.Size = new Size(50, 15);
+            lblMoney.TabIndex = 16;
+            lblMoney.Text = "Money: ";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblMoney);
+            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(pb3);
             Controls.Add(AutoPlay);
@@ -227,5 +250,7 @@
         private Button AutoPlay;
         private PictureBox pb3;
         private Button button1;
+        private Button button2;
+        private Label lblMoney;
     }
 }

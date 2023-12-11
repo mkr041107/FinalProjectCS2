@@ -1,9 +1,14 @@
+using System.Data.SqlTypes;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace FinalProjectCS2
 {
     public partial class Form1 : Form
     {
+
+
+
         public Form1()
         {
             InitializeComponent();
@@ -12,6 +17,7 @@ namespace FinalProjectCS2
 
         Random random = new Random();
 
+        int money = 0;
         int dirt;
         int cobbleStone;
         int iron;
@@ -19,6 +25,14 @@ namespace FinalProjectCS2
         int diamond;
         int emerald;
         int netherite;
+        int dirtChance;
+        int cobbleStoneChance;
+        int ironChance;
+        int goldChance;
+        int diamondChance;
+        int emeraldChance;
+        int netheriteChance;
+        int chainmailSArmorTrimChance;
         int chainmailSArmorTrim;
         int dirtCount = 0;
         int cobbleStoneCount = 0;
@@ -29,7 +43,7 @@ namespace FinalProjectCS2
         int netheriteCount = 0;
         int chainmailSArmorTrimCount = 0;
         int xCount = 0;
-        int money = 0;
+
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
@@ -39,6 +53,7 @@ namespace FinalProjectCS2
         {
             pictureBoxes();
             slotChecker();
+            lblMoney.Text = money.ToString();
         }
         private void Odds()
         {
@@ -64,7 +79,8 @@ namespace FinalProjectCS2
 
         private void AutoPlay_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i <= 100; i++) {
+            for (int i = 0; i <= 100; i++)
+            {
                 pictureBoxes();
                 slotChecker();
             }
@@ -75,10 +91,10 @@ namespace FinalProjectCS2
             for (int i = 0; i < pictureBoxes.Length; i++)
             {
                 Odds();
-                
 
 
-               
+
+
                 if (dirt == 4)
                 {
                     pictureBoxes[i].Image = Properties.Resources.dirt;
@@ -172,8 +188,24 @@ namespace FinalProjectCS2
                 MessageBox.Show("You Win!!!");
                 this.Close();
             }
+            if (xCount == 3)
+            {
+                money -= 2;
+
+            }
 
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form3 Upgrades = new Form3();
+            this.Hide();
+            Upgrades.StartPosition = FormStartPosition.CenterScreen;
+            Upgrades.ShowDialog();
+            this.Close();
+
+            money = Class1.money;
         }
     }
 }
