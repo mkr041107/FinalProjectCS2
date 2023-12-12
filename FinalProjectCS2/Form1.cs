@@ -17,7 +17,7 @@ namespace FinalProjectCS2
 
         Random random = new Random();
 
-        int money = 0;
+        int money = Class1.money;
         int dirt;
         int cobbleStone;
         int iron;
@@ -25,14 +25,14 @@ namespace FinalProjectCS2
         int diamond;
         int emerald;
         int netherite;
-        int dirtChance;
-        int cobbleStoneChance;
-        int ironChance;
-        int goldChance;
-        int diamondChance;
-        int emeraldChance;
-        int netheriteChance;
-        int chainmailSArmorTrimChance;
+        int dirtChance = Class2.dirtChance;
+        int cobbleStoneChance = Class2.cobbleStoneChance;
+        int ironChance = Class2.ironChance;
+        int goldChance = Class2.goldChance;
+        int diamondChance = Class2.diamondChance;
+        int emeraldChance = Class2.emeraldChance;
+        int netheriteChance = Class2.netheriteChance;
+        int chainmailSArmorTrimChance = Class2.ChainMailSArmorTrimChance;
         int chainmailSArmorTrim;
         int dirtCount = 0;
         int cobbleStoneCount = 0;
@@ -58,14 +58,14 @@ namespace FinalProjectCS2
         private void Odds()
         {
 
-            dirt = random.Next(1, 5);
-            cobbleStone = random.Next(1, 17);
-            iron = random.Next(1, 65);
-            gold = random.Next(1, 129);
-            diamond = random.Next(1, 513);
-            emerald = random.Next(1, 1025);
-            netherite = random.Next(1, 2049);
-            chainmailSArmorTrim = random.Next(1, 100000001);
+            dirt = random.Next(1, dirtChance);
+            cobbleStone = random.Next(1, cobbleStoneChance);
+            iron = random.Next(1, ironChance);
+            gold = random.Next(1, goldChance);
+            diamond = random.Next(1, diamondChance);
+            emerald = random.Next(1, emeraldChance);
+            netherite = random.Next(1, netheriteChance);
+            chainmailSArmorTrim = random.Next(1, chainmailSArmorTrimChance);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -79,16 +79,17 @@ namespace FinalProjectCS2
 
         private void AutoPlay_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i <= 100; i++)
+            for (int i = 0; i >= 100; i++)
             {
                 pictureBoxes();
                 slotChecker();
+                lblMoney.Text = money.ToString();
             }
         }
         private void pictureBoxes()
         {
             PictureBox[] pictureBoxes = { pb1, pb2, pb3 };
-            for (int i = 0; i < pictureBoxes.Length; i++)
+            for (int i = 0; i < 3; i++)
             {
                 Odds();
 
@@ -141,20 +142,13 @@ namespace FinalProjectCS2
                     xCount++;
                 }
             }
+         
 
         }
         private void slotChecker()
         {
 
-            dirtCount = 0;
-            cobbleStoneCount = 0;
-            ironCount = 0;
-            goldCount = 0;
-            diamondCount = 0;
-            emeraldCount = 0;
-            netheriteCount = 0;
-            chainmailSArmorTrimCount = 0;
-            xCount = 0;
+           
             if (dirtCount == 3)
             {
                 money += 4;
@@ -190,15 +184,24 @@ namespace FinalProjectCS2
             }
             if (xCount == 3)
             {
-                money -= 2;
+                money += -2;
 
             }
-
+            dirtCount = 0;
+            cobbleStoneCount = 0;
+            ironCount = 0;
+            goldCount = 0;
+            diamondCount = 0;
+            emeraldCount = 0;
+            netheriteCount = 0;
+            chainmailSArmorTrimCount = 0;
+            xCount = 0;
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+          
             Form3 Upgrades = new Form3();
             this.Hide();
             Upgrades.StartPosition = FormStartPosition.CenterScreen;

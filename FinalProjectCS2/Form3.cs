@@ -42,14 +42,16 @@ namespace FinalProjectCS2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dirtChance = Class2.dirtChance;
-            cobbleStoneChance = Class2.cobbleStoneChance;
-            ironChance = Class2.ironChance;
-            goldChance = Class2.goldChance;
-            diamondChance = Class2.diamondChance;
-            emeraldChance = Class2.emeraldChance;
-            netheriteChance = Class2.netheriteChance;
-            chainmailSArmorTrimChance = Class2.ChainMailSArmorTrimChance;
+Class2.dirtChance = dirtChance;
+            Class2.cobbleStoneChance = cobbleStoneChance;
+            Class2.ironChance = ironChance;
+            Class2.goldChance = goldChance;
+            Class2.diamondChance = diamondChance;
+            Class2.emeraldChance = emeraldChance;
+            Class2.netheriteChance = netheriteChance;
+            Class2.ChainMailSArmorTrimChance = chainmailSArmorTrimChance;
+            
+
         }
 
         private void Form3_Load(object sender, EventArgs e)
