@@ -21,15 +21,15 @@ namespace FinalProjectCS2
             InitializeComponent();
            
         }
-        int money = Class1.money;
-        int dirtChance = Class2.dirtChance;
-        int cobbleStoneChance = Class2.cobbleStoneChance;
-        int ironChance = Class2.ironChance;
-        int goldChance = Class2.goldChance;
-        int diamondChance = Class2.diamondChance;
-        int emeraldChance = Class2.emeraldChance;
-        int netheriteChance = Class2.netheriteChance;
-        int chainmailSArmorTrimChance = Class2.ChainMailSArmorTrimChance;
+        int money;
+        int dirtChance;
+        int cobbleStoneChance;
+        int ironChance;
+        int goldChance;
+        int diamondChance;
+        int emeraldChance;
+        int netheriteChance;
+        int chainmailSArmorTrimChance;
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             if (money >= 128)
@@ -57,7 +57,15 @@ Class2.dirtChance = dirtChance;
         private void Form3_Load(object sender, EventArgs e)
         {
 
-            MessageBox.Show("" + money);
+           money = Class1.money;
+           dirtChance = Class2.dirtChance;
+           cobbleStoneChance = Class2.cobbleStoneChance;
+           ironChance = Class2.ironChance;
+           goldChance = Class2.goldChance;
+           diamondChance = Class2.diamondChance;
+           emeraldChance = Class2.emeraldChance;
+           netheriteChance = Class2.netheriteChance;
+           chainmailSArmorTrimChance = Class2.ChainMailSArmorTrimChance;
         }
 
         private void Form3_MouseClick(object sender, MouseEventArgs e)
@@ -70,7 +78,7 @@ Class2.dirtChance = dirtChance;
             if (money >= 256)
             {
                 money -= 256;
-                cobbleStoneChance += 1;
+                cobbleStoneChance += 2;
             }
         }
 
@@ -79,7 +87,7 @@ Class2.dirtChance = dirtChance;
             if (money >= 512)
             {
                 money -= 512;
-                ironChance += 1;
+                ironChance += 4;
             }
         }
 
@@ -88,7 +96,7 @@ Class2.dirtChance = dirtChance;
             if (money >= 1024)
             {
                 money -= 1024;
-                goldChance += 1;
+                goldChance += 8;
             }
         }
 
@@ -97,7 +105,7 @@ Class2.dirtChance = dirtChance;
             if (money >= 2048)
             {
                 money -= 2048;
-                diamondChance += 1;
+                diamondChance += 16;
             }
         }
 
@@ -106,7 +114,7 @@ Class2.dirtChance = dirtChance;
             if (money >= 4096)
             {
                 money -= 4096;
-                emeraldChance += 1;
+                emeraldChance += 32;
             }
         }
 
@@ -115,7 +123,7 @@ Class2.dirtChance = dirtChance;
             if (money >= 8192)
             {
                 money -= 8192;
-                netheriteChance += 1;
+                netheriteChance += 64;
             }
         }
 
@@ -124,7 +132,7 @@ Class2.dirtChance = dirtChance;
             if (money >= 16384)
             {
                 money -= 16384;
-                chainmailSArmorTrimChance += 1;
+                chainmailSArmorTrimChance += 128;
             }
 
         }

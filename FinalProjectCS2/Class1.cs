@@ -2,6 +2,6 @@
 {
     internal class Class1
     {
-        ublic static int money;
+        public static int money;
     }
 }

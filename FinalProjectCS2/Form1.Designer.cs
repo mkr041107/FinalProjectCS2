@@ -222,6 +222,8 @@
             Controls.Add(pb1);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
+            KeyDown += Form1_KeyDown;
             ((System.ComponentModel.ISupportInitialize)pb1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pb2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();

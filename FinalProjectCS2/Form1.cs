@@ -9,6 +9,7 @@ namespace FinalProjectCS2
 
 
 
+
         public Form1()
         {
             InitializeComponent();
@@ -25,14 +26,14 @@ namespace FinalProjectCS2
         int diamond;
         int emerald;
         int netherite;
-        int dirtChance = Class2.dirtChance;
-        int cobbleStoneChance = Class2.cobbleStoneChance;
-        int ironChance = Class2.ironChance;
-        int goldChance = Class2.goldChance;
-        int diamondChance = Class2.diamondChance;
-        int emeraldChance = Class2.emeraldChance;
-        int netheriteChance = Class2.netheriteChance;
-        int chainmailSArmorTrimChance = Class2.ChainMailSArmorTrimChance;
+        int dirtChance;
+        int cobbleStoneChance;
+        int ironChance;
+        int goldChance;
+        int diamondChance;
+        int emeraldChance;
+        int netheriteChance;
+        int chainmailSArmorTrimChance;
         int chainmailSArmorTrim;
         int dirtCount = 0;
         int cobbleStoneCount = 0;
@@ -79,12 +80,7 @@ namespace FinalProjectCS2
 
         private void AutoPlay_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i >= 100; i++)
-            {
-                pictureBoxes();
-                slotChecker();
-                lblMoney.Text = money.ToString();
-            }
+
         }
         private void pictureBoxes()
         {
@@ -142,13 +138,13 @@ namespace FinalProjectCS2
                     xCount++;
                 }
             }
-         
+
 
         }
         private void slotChecker()
         {
 
-           
+
             if (dirtCount == 3)
             {
                 money += 4;
@@ -201,7 +197,7 @@ namespace FinalProjectCS2
 
         private void button2_Click(object sender, EventArgs e)
         {
-          
+
             Form3 Upgrades = new Form3();
             this.Hide();
             Upgrades.StartPosition = FormStartPosition.CenterScreen;
@@ -209,6 +205,27 @@ namespace FinalProjectCS2
             this.Close();
 
             money = Class1.money;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            dirtChance = Class2.dirtChance;
+            cobbleStoneChance = Class2.cobbleStoneChance;
+            ironChance = Class2.ironChance;
+            goldChance = Class2.goldChance;
+            diamondChance = Class2.diamondChance;
+            emeraldChance = Class2.emeraldChance;
+            netheriteChance = Class2.netheriteChance;
+            chainmailSArmorTrimChance = Class2.ChainMailSArmorTrimChance;
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                money += 100000;
+
+            }
         }
     }
 }
