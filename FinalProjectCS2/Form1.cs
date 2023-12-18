@@ -54,7 +54,7 @@ namespace FinalProjectCS2
         {
             pictureBoxes();
             slotChecker();
-            lblMoney.Text = money.ToString();
+            lblMoney.Text = "Money: " + money.ToString();
         }
         private void Odds()
         {
@@ -197,18 +197,19 @@ namespace FinalProjectCS2
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Class1.SetMoney(money);
             Form3 Upgrades = new Form3();
             this.Hide();
             Upgrades.StartPosition = FormStartPosition.CenterScreen;
             Upgrades.ShowDialog();
             this.Close();
 
-            money = Class1.money;
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             dirtChance = Class2.dirtChance;
             cobbleStoneChance = Class2.cobbleStoneChance;
             ironChance = Class2.ironChance;
@@ -223,9 +224,30 @@ namespace FinalProjectCS2
         {
             if (e.KeyCode == Keys.Delete)
             {
-                money += 100000;
-
+                money += 1000;
+                lblMoney.Text = "Money: " + money.ToString();
             }
         }
+
+        private void pb3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
+
     }
 }

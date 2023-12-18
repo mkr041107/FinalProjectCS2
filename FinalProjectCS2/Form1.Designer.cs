@@ -38,7 +38,6 @@
             pictureBox9 = new PictureBox();
             label1 = new Label();
             Play = new Button();
-            AutoPlay = new Button();
             pb3 = new PictureBox();
             button1 = new Button();
             button2 = new Button();
@@ -80,6 +79,7 @@
             pictureBox4.Size = new Size(80, 297);
             pictureBox4.TabIndex = 3;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
             // 
             // pictureBox6
             // 
@@ -142,25 +142,13 @@
             // 
             Play.BackColor = Color.Yellow;
             Play.ForeColor = SystemColors.InfoText;
-            Play.Location = new Point(182, 297);
+            Play.Location = new Point(309, 299);
             Play.Name = "Play";
             Play.Size = new Size(94, 54);
             Play.TabIndex = 11;
             Play.Text = "1 Play";
             Play.UseVisualStyleBackColor = false;
             Play.Click += Play_Click;
-            // 
-            // AutoPlay
-            // 
-            AutoPlay.BackColor = Color.Yellow;
-            AutoPlay.ForeColor = SystemColors.InfoText;
-            AutoPlay.Location = new Point(417, 297);
-            AutoPlay.Name = "AutoPlay";
-            AutoPlay.Size = new Size(94, 54);
-            AutoPlay.TabIndex = 12;
-            AutoPlay.Text = "Auto Play";
-            AutoPlay.UseVisualStyleBackColor = false;
-            AutoPlay.Click += AutoPlay_Click;
             // 
             // pb3
             // 
@@ -170,6 +158,7 @@
             pb3.SizeMode = PictureBoxSizeMode.Zoom;
             pb3.TabIndex = 13;
             pb3.TabStop = false;
+            pb3.Click += pb3_Click;
             // 
             // button1
             // 
@@ -183,22 +172,22 @@
             // 
             // button2
             // 
-            button2.Location = new Point(50, 392);
+            button2.Location = new Point(12, 376);
             button2.Name = "button2";
-            button2.Size = new Size(75, 23);
+            button2.Size = new Size(158, 58);
             button2.TabIndex = 15;
-            button2.Text = "button2";
+            button2.Text = "Go To Upgrades";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
             // lblMoney
             // 
             lblMoney.AutoSize = true;
-            lblMoney.Location = new Point(79, 24);
+            lblMoney.Location = new Point(44, 22);
             lblMoney.Name = "lblMoney";
-            lblMoney.Size = new Size(50, 15);
+            lblMoney.Size = new Size(56, 15);
             lblMoney.TabIndex = 16;
-            lblMoney.Text = "Money: ";
+            lblMoney.Text = "Money: 0";
             // 
             // Form1
             // 
@@ -209,7 +198,6 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(pb3);
-            Controls.Add(AutoPlay);
             Controls.Add(Play);
             Controls.Add(label1);
             Controls.Add(pictureBox9);
@@ -220,10 +208,13 @@
             Controls.Add(pictureBox4);
             Controls.Add(pb2);
             Controls.Add(pb1);
+            KeyPreview = true;
             Name = "Form1";
-            Text = "Form1";
+            Text = "Slots";
             Load += Form1_Load;
             KeyDown += Form1_KeyDown;
+            KeyPress += Form1_KeyPress;
+            KeyUp += Form1_KeyUp;
             ((System.ComponentModel.ISupportInitialize)pb1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pb2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
@@ -249,7 +240,6 @@
         private PictureBox pictureBox9;
         private Label label1;
         private Button Play;
-        private Button AutoPlay;
         private PictureBox pb3;
         private Button button1;
         private Button button2;

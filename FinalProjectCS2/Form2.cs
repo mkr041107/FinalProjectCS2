@@ -25,7 +25,7 @@ namespace FinalProjectCS2
         private void button1_Click(object sender, EventArgs e)
         {
             Form1 slots = new Form1();
-         
+
             this.Hide();
             slots.StartPosition = FormStartPosition.CenterScreen;
             slots.ShowDialog();

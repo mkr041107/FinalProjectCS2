@@ -53,6 +53,15 @@
             label14 = new Label();
             label15 = new Label();
             label16 = new Label();
+            lblMoney2 = new Label();
+            label17 = new Label();
+            label18 = new Label();
+            label19 = new Label();
+            label20 = new Label();
+            label21 = new Label();
+            label22 = new Label();
+            label23 = new Label();
+            label24 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -142,11 +151,11 @@
             // 
             // button1
             // 
-            button1.Location = new Point(657, 400);
+            button1.Location = new Point(473, 233);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(259, 190);
             button1.TabIndex = 7;
-            button1.Text = "button1";
+            button1.Text = "Go To Slots";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -305,11 +314,101 @@
             label16.TabIndex = 23;
             label16.Text = "16384$";
             // 
+            // lblMoney2
+            // 
+            lblMoney2.AutoSize = true;
+            lblMoney2.Location = new Point(491, 9);
+            lblMoney2.Name = "lblMoney2";
+            lblMoney2.Size = new Size(50, 15);
+            lblMoney2.TabIndex = 25;
+            lblMoney2.Text = "Money: ";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(214, 22);
+            label17.Name = "label17";
+            label17.Size = new Size(38, 15);
+            label17.TabIndex = 26;
+            label17.Text = "Max 2";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(214, 81);
+            label18.Name = "label18";
+            label18.Size = new Size(38, 15);
+            label18.TabIndex = 27;
+            label18.Text = "Max 4";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Location = new Point(214, 130);
+            label19.Name = "label19";
+            label19.Size = new Size(44, 15);
+            label19.TabIndex = 28;
+            label19.Text = "Max 16";
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Location = new Point(214, 187);
+            label20.Name = "label20";
+            label20.Size = new Size(44, 15);
+            label20.TabIndex = 29;
+            label20.Text = "Max 64";
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Location = new Point(214, 247);
+            label21.Name = "label21";
+            label21.Size = new Size(50, 15);
+            label21.TabIndex = 30;
+            label21.Text = "Max 128";
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.Location = new Point(214, 304);
+            label22.Name = "label22";
+            label22.Size = new Size(50, 15);
+            label22.TabIndex = 31;
+            label22.Text = "Max 256";
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Location = new Point(223, 358);
+            label23.Name = "label23";
+            label23.Size = new Size(50, 15);
+            label23.TabIndex = 32;
+            label23.Text = "Max 512";
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Location = new Point(436, 22);
+            label24.Name = "label24";
+            label24.Size = new Size(56, 15);
+            label24.TabIndex = 33;
+            label24.Text = "Max 1024";
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label24);
+            Controls.Add(label23);
+            Controls.Add(label22);
+            Controls.Add(label21);
+            Controls.Add(label20);
+            Controls.Add(label19);
+            Controls.Add(label18);
+            Controls.Add(label17);
+            Controls.Add(lblMoney2);
             Controls.Add(label15);
             Controls.Add(label16);
             Controls.Add(label13);
@@ -336,7 +435,7 @@
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Name = "Form3";
-            Text = "Form3";
+            Text = "Upgrades";
             Load += Form3_Load;
             MouseClick += Form3_MouseClick;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -378,5 +477,14 @@
         private Label label14;
         private Label label15;
         private Label label16;
+        private Label lblMoney2;
+        private Label label17;
+        private Label label18;
+        private Label label19;
+        private Label label20;
+        private Label label21;
+        private Label label22;
+        private Label label23;
+        private Label label24;
     }
 }
